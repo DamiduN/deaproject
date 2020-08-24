@@ -124,6 +124,3 @@ public class Getintouch extends HttpServlet {
     }// </editor-fold>
 
 }
-
- 
-
