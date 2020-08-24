@@ -27,7 +27,7 @@
 
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Admin(booking Details)</title>
+        <title>Admin</title>
     </head>
     <body><center><h1> BOOKING DETAILS</h1>
 

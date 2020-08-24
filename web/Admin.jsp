@@ -75,7 +75,7 @@
         <div class="tab">
   <button class="tablinks" onclick="openCity(event, 'reservation')">Reservation</button>
   <button class="tablinks" onclick="openCity(event, 'registedUsers')">Registered users</button>
-
+<button class="tablinks" onclick="openCity(event, 'comment')">Comment</button>
 </div>
 
 <!-- Tab content -->
@@ -147,7 +147,7 @@
                 <th>username</th>
                 <th>Email</th>
                 
-                <th></th>
+            
 
 
 
@@ -199,6 +199,70 @@
         </table>  
 
 </div>
+                    <div id="comment" class="tabcontent">
+  <h3>Feedback</h3>
+  <table border="1" class="table table-striped">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Comment</th>
+                
+                
+
+
+
+            </tr>
+            <%
+                try {
+                    Statement statement = null;
+                    ResultSet resultSet = null;
+
+                    dbCon obj_DB_Connection = new dbCon();
+                    Connection connection = obj_DB_Connection.get_connection();
+                    statement = connection.createStatement();
+                    String sql = "SELECT * FROM comment ";
+
+                    resultSet = statement.executeQuery(sql);
+                    while (resultSet.next()) {
+            %>
+
+            <tr>
+
+                <td><label>
+                        
+                        <%=resultSet.getString("firstname")%></label></td>
+
+                <td><label>
+                      
+                        <%=resultSet.getString("email")%></label></td>
+                <td><label>
+                      
+                        <%=resultSet.getString("description")%></label></td>
+               
+                <td><form action="deleteservlet" method="post">
+                                            <input style="display: none;" type="text" name="req_id"
+                                                   value='<%=resultSet.getString("id")%>'>
+                                            <button type="submit" class="btn danger" >Delete</button>
+                                        </form></td>
+
+
+
+            </tr>
+            <%
+                        }
+                    %>
+
+                    <%
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    %>
+
+
+        </table>  
+
+</div>
+
 
 
        
