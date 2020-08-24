@@ -65,7 +65,7 @@ public class LoginServlet extends HttpServlet {
                     session.setAttribute("LogedInOwnerName", username);
 
                     out.println("<script type=\"text/javascript\">");
-                    out.println("location='admin/home.jsp';");
+                    out.println("location='Admin.jsp';");
                     out.println("</script>");
                 } else {
                     session.setAttribute("LogedInUserName", username);

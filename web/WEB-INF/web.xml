@@ -12,6 +12,10 @@
         <servlet-name>reservation</servlet-name>
         <servlet-class>servlet.reservation</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Getintouch</servlet-name>
+        <servlet-class>servlet.Getintouch</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>SignupServerlet</servlet-name>
         <url-pattern>/SignupServerlet</url-pattern>
@@ -23,6 +27,10 @@
     <servlet-mapping>
         <servlet-name>reservation</servlet-name>
         <url-pattern>/reservation</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Getintouch</servlet-name>
+        <url-pattern>/Getintouch</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
