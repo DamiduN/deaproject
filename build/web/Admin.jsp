@@ -67,11 +67,13 @@
   border: 1px solid #ccc;
   border-top: none;
 }
+
             </style>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
     </head>
     <body>
+        <header id="gtco-header" class="gtco-cover gtco-cover-md" role="banner" style="background-image: url(images/img_bg_1.jpg)" data-stellar-background-ratio="0.5">
         <div class="tab">
   <button class="tablinks" onclick="openCity(event, 'reservation')">Reservation</button>
   <button class="tablinks" onclick="openCity(event, 'registedUsers')">Registered users</button>
@@ -80,6 +82,7 @@
 
 <!-- Tab content -->
 <div id="reservation" class="tabcontent">
+    <h3>Reservation</h3>
    <table border="1" class="table table-striped">
             <tr>
                 <th>Persons</th>
