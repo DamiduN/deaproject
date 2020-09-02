@@ -120,7 +120,7 @@
                        
                         <%=resultSet.getString("time")%></label></td>
               
-                <td><form action="deleteservlet" method="post">
+                <td><form action="delete" method="post">
                                             <input style="display: none;" type="text" name="req_id"
                                                    value='<%=resultSet.getString("id")%>'>
                                             <button type="submit" class="btn danger" >Delete</button>
@@ -179,7 +179,7 @@
                       
                         <%=resultSet.getString("Email")%></label></td>
                
-                <td><form action="deleteservlet" method="post">
+                <td><form action="delete" method="post">
                                             <input style="display: none;" type="text" name="req_id"
                                                    value='<%=resultSet.getString("id")%>'>
                                             <button type="submit" class="btn danger" >Delete</button>
@@ -242,7 +242,7 @@
                       
                         <%=resultSet.getString("description")%></label></td>
                
-                <td><form action="deleteservlet" method="post">
+                <td><form action="delete" method="post">
                                             <input style="display: none;" type="text" name="req_id"
                                                    value='<%=resultSet.getString("id")%>'>
                                             <button type="submit" class="btn danger" >Delete</button>
