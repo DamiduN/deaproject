@@ -36,13 +36,14 @@ public class LoginServlet extends HttpServlet {
             String dbUsername = null;
             String dbPassword = null;
             String dbtype = null;
+            String userid = null;
 
             dbCon obj_DB_Connection = new dbCon();
             Connection connection = obj_DB_Connection.get_connection();
             PreparedStatement ps = null;
             ResultSet rs = null;
 
-            String sql = "select username,password,type from users where username=? and password=?";
+            String sql = "select username,password,type , id from users where username=? and password=?";
             Class.forName("com.mysql.jdbc.Driver");
             ps = connection.prepareStatement(sql);
 
@@ -53,12 +54,13 @@ public class LoginServlet extends HttpServlet {
                 dbUsername = rs.getString(1);
                 dbPassword = rs.getString(2);
                 dbtype = rs.getString(3);
+                userid = rs.getString(4);
             }
             if (username.equals(dbUsername) && password.equals(dbPassword)) {
 
                 HttpSession session = request.getSession();
                 session.setAttribute("LogedInUserName", username);
-
+                session.setAttribute("LogedInUserid", userid);
                 session.setAttribute("LogedInUserType", dbtype);
 
                 if (dbtype.equals("admin")) {

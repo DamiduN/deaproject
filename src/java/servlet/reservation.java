@@ -15,6 +15,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -39,7 +40,7 @@ public class reservation extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet reservation</title>");            
+            out.println("<title>Servlet reservation</title>");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet reservation at " + request.getContextPath() + "</h1>");
@@ -72,36 +73,37 @@ public class reservation extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     @Override
-       protected void doPost(HttpServletRequest request, HttpServletResponse response)
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         PrintWriter out = response.getWriter();
         try {
             String person = request.getParameter("person");
             String date = request.getParameter("date");
             String time = request.getParameter("time");
-            
-            
-            if (person != "" && date !="" && time != "") {
+            HttpSession session = request.getSession();
+
+            if (person != "" && date != "" && time != "") {
 
                 dbCon obj_DB_Connection = new dbCon();
                 Connection connection = obj_DB_Connection.get_connection();
                 PreparedStatement ps = null;
 
-                String sql = "insert into reservation ( person,date,time) values(?,?,?)";
+                String sql = "insert into reservation ( person,date,time,userid,uname) values(?,?,?,?,?)";
                 Class.forName("com.mysql.jdbc.Driver");
-                
+
                 ps = connection.prepareStatement(sql);
                 ps.setString(1, person);
                 ps.setString(2, date);
                 ps.setString(3, time);
-                
+                ps.setString(4, session.getAttribute("LogedInUserid").toString());
+                ps.setString(5, session.getAttribute("LogedInUserName").toString());
+
                 ps.executeUpdate();
                 out.println("<script type=\"text/javascript\">");
                 out.println("alert('Reservation Completed Successfully !!');");
                 out.println("location='home.html';");
                 out.println("</script>");
-            }
-            else{
+            } else {
                 out.println("<script type=\"text/javascript\">");
                 out.println("alert('FillOut all the feilds!!');");
                 out.println("location='home.html';");

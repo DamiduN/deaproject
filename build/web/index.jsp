@@ -3,7 +3,7 @@
 <head>
 <title>Savory</title>
 </head>
-<link rel="icon" type="image/png" href="images/logo.png">
+<link rel="icon" type="image/png" href="images/images.png">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <script type="text/javascript">
 	setTimeout(function(){
@@ -14,14 +14,12 @@
 	      	window.location.href = "login.jsp";
 	    }
 	    else{
-	    	if(usertype_check_val == "owner"){
-	    		window.location.href = "owner/home.jsp";
+	    	if(usertype_check_val == "admin"){
+	    		window.location.href = "Admin.jsp";
 	    	}
-	    	else if(usertype_check_val == "manager"){
-	    		window.location.href = "manager/home.jsp";
-	    	}
+	    	
 	    	else{
-	    		window.location.href = "user/home.jsp";
+	    		window.location.href = "home.jsp";
 	    	}
 	    }
          }, 2500);
@@ -48,9 +46,9 @@
 
 <body>
 
-	<img src="images/logo_white.png" class="w3-blue img_cls" style="">
+	<img src="images/savo.png" class="w3-blue img_cls" style="">
 
-	<img src="images/hhh.png" class="loading_img">
+	
 
 	<p id="user_check" style="display: none;"><%= session.getAttribute( "LogedInUserName" ) %></p>
 	<p id="usertype_check" style="display: none;"><%= session.getAttribute( "LogedInUserType" ) %></p>

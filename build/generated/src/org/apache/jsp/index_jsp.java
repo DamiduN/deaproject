@@ -46,7 +46,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<head>\n");
       out.write("<title>Savory</title>\n");
       out.write("</head>\n");
-      out.write("<link rel=\"icon\" type=\"image/png\" href=\"images/logo.png\">\n");
+      out.write("<link rel=\"icon\" type=\"image/png\" href=\"images/images.png\">\n");
       out.write("<link rel=\"stylesheet\" href=\"https://www.w3schools.com/w3css/4/w3.css\">\n");
       out.write("<script type=\"text/javascript\">\n");
       out.write("\tsetTimeout(function(){\n");
@@ -93,7 +93,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("\t<img src=\"images/logo_white.png\" class=\"w3-blue img_cls\" style=\"\">\n");
       out.write("\n");
-      out.write("\t<img src=\"images/hhh.png\" class=\"loading_img\">\n");
+      out.write("\t<img src=\"images/images.png\" class=\"loading_img\">\n");
       out.write("\n");
       out.write("\t<p id=\"user_check\" style=\"display: none;\">");
       out.print( session.getAttribute( "LogedInUserName" ) );
