@@ -134,7 +134,7 @@
 <body>
 
     <div class="loginbox"">
-        <img src="images/logo_white.png" class="avatar">
+        <img src="images/images.png" class="avatar">
         <h1>Sign Up</h1>
         <form action="SignupServerlet" method="post">
             <p>Username</p>
