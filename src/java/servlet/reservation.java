@@ -19,7 +19,7 @@ import javax.servlet.http.HttpSession;
 
 /**
  *
- * @author Damindu
+ * @author Ishma
  */
 public class reservation extends HttpServlet {
 
