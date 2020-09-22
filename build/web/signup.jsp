@@ -2,7 +2,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <head>
-    <title>LuXe</title>
+    <title>Savory.</title>
     <link rel="icon" type="image/png" href="images/logo.png">
 </head>
 
@@ -134,7 +134,7 @@
 <body>
 
     <div class="loginbox"">
-        <img src="images/logo_white.png" class="avatar">
+        <img src="images/images.png" class="avatar">
         <h1>Sign Up</h1>
         <form action="SignupServerlet" method="post">
             <p>Username</p>
