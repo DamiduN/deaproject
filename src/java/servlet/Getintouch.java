@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Damindu
+ * @author Urshala
  */
 public class Getintouch extends HttpServlet {
 
