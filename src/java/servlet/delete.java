@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Damindu
+ * @author Wasana
  */
 public class delete extends HttpServlet {
 
